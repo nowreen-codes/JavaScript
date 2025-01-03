@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Reverse a Number and Check Palindrome</h1>
+
+    <p>Enter a positive integer: <input type="number" id="number"><br>
+    <button onclick="reversePalindrome()">Reverse and Check</button></p>
+
+    <script>
+        function reversePalindrome() {
+            
+            let num = document.getElementById("number").value;
+            num = Number(num); 
+            let reversedNum = 0;
+            let originalNum = num;
+
+            while (num > 0) {
+                let digit = num % 10; 
+                reversedNum = reversedNum * 10 + digit; 
+                num = (num - digit) / 10;  
+            }
+            if (originalNum === reversedNum) {
+                console.log("Reversed Number: " + reversedNum);
+                console.log("Yes, it is a palindrome.");
+            } else {
+                console.log("Reversed Number: " + reversedNum);
+                console.log("No, it is not a palindrome.");
+            }
+        }
+    </script>
+</body>
+</html>

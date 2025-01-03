@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Calculate Factorial Using Recursion</h1>
+
+    <p>
+        Enter a number: <input type="number" id="number"><br>
+    </p>
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <script>
+        
+        function factorial(n) {
+            if (n === 0 || n === 1) {
+                return 1; 
+            } else {
+                return n * factorial(n - 1); 
+            }
+        }
+
+        function calculateFactorial() {
+            let num = document.getElementById("number").value;
+            if (num < 0) {
+                console.log("Factorial is not defined for negative numbers.");
+         
+            } else {
+                console.log("Factorial of " + num + " is " + factorial(num));
+            }
+        }
+    </script>
+</body>
+</html>

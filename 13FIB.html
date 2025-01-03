@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Find nth Fibonacci Number</h1>
+
+    <p>Enter a number (n): <input type="number" id="n"><br>
+    <button onclick="findFibonacci()">Find Fibonacci</button></p>
+
+    <script>
+        function findFibonacci() {
+            let n = document.getElementById("n").value;
+            n = Number(n);
+            
+            if (n <= 0) {
+                console.log("Enter Positive number.");
+                return;
+            }
+
+            let fib = (n) => (n <= 1) ? n : fib(n - 1) + fib(n - 2);
+            console.log(fib(n)); 
+        }
+    </script>
+</body>
+</html>

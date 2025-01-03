@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Check Even or Odd Using Bitwise Operators</h1>
+
+    <p>
+        Enter a number: <input type="number" id="number"><br>
+        <button onclick="EvenOrOdd()">Check</button>
+    </p>
+
+    <script>
+        function EvenOrOdd() {
+            let num = document.getElementById("number").value;
+
+          
+            if (num & 1) { //AND 
+                console.log(num + " is Odd.");
+            } else {
+                console.log(num + " is Even.");
+            }
+        }
+    </script>
+</body>
+</html>

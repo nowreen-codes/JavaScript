@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Calculate GCD and LCM of Two Numbers</h1>
+
+    <p>Enter a numbers: <input type="number" id="num1"><br>
+    <p>Enter another number: <input type="number" id="num2"><br>
+    <button onclick="GCDAndLCM()">Calculate GCD and LCM</button></p>
+
+    <script>
+        function gcd(a, b) {
+            if (b === 0) return a;
+            return gcd(b, a % b);
+        }
+        function lcm(a, b) {
+            return (a * b) / gcd(a, b);
+        }
+        function GCDAndLCM() {
+            let a = document.getElementById("num1").value;
+            let b = document.getElementById("num2").value;
+            a = Number(a);
+            b = Number(b);
+
+            let gcdResult = gcd(a, b);
+            let lcmResult = lcm(a, b);
+
+            console.log("GCD: " + gcdResult);
+            console.log("LCM: " + lcmResult);
+        }
+    </script>
+</body>
+</html>

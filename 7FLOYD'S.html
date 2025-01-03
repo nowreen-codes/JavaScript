@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Floyd's Triangle</h1>
+
+    <p>Enter the number of rows: <input type="number" id="rows"><br>
+    <button onclick="printFloydsTriangle()">Print Floyd's Triangle</button></p>
+
+    <script>
+        function printFloydsTriangle() {
+            let rows = document.getElementById("rows").value;
+            rows = Number(rows); 
+
+            let num = 1; 
+            for (let i = 1; i <= rows; i++) {
+                let row = "";
+                for (let j = 1; j <= i; j++) {
+                    row += num + " "; 
+                    num++; 
+                }
+                console.log(row.trim()); 
+            }
+        }
+    </script>
+</body>
+</html>

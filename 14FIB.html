@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Find nth Fibonacci Number</h1>
+
+    <p>Enter a number (n): <input type="number" id="n"><br>
+    <button onclick="printFibonacci()">Find Fibonacci</button></p>
+
+    <script>
+        function fibonacci(n) {
+            if (n <= 1) {
+                return n; 
+            }
+            return fibonacci(n - 1) + fibonacci(n - 2); 
+        }
+            function printFibonacci() {
+            let n = document.getElementById("n").value;
+            n = Number(n);
+            
+            if (n < 0) {
+                console.log("Please enter a non-negative number.");
+                return;
+            }
+
+            console.log(fibonacci(n)); 
+        }
+    </script>
+</body>
+</html>

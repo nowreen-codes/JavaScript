@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Calculate x = a / (b - c)</h1>
+
+    <p>
+        a: <input type="number" id="a"><br>
+        b: <input type="number" id="b"><br>
+        c: <input type="number" id="c"><br>
+    </p>
+    <button onclick="calculate()">Calculate</button>
+
+    <script>
+        function calculate() {
+            let a = document.getElementById("a").value;
+            let b = document.getElementById("b").value;
+            let c = document.getElementById("c").value;
+
+            if (b - c == 0) {
+                console.log("Error: Division by zero.");
+            } else {
+                console.log("x = " + (a / (b - c)));
+            }
+        }
+    </script>
+</body>
+</html>
